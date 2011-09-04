@@ -11,3 +11,10 @@ class Crime(models.Model):
 
     def __unicode__(self):
         return "[%s] %s" % (self.crime_type, self.description)
+
+
+class Block(models.Model):
+    poly = models.PolygonField()
+
+    def __unicode__(self):
+        return "Block #%s" % self.id
