@@ -16,5 +16,7 @@ class Crime(models.Model):
 class Block(models.Model):
     poly = models.PolygonField()
 
+    objects = models.GeoManager()
+
     def __unicode__(self):
         return "Block #%s" % self.id

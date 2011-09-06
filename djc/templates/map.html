@@ -23,10 +23,16 @@
             + "/998/256/{Z}/{X}/{Y}.png")
             .hosts(["a.", "b.", "c.", ""])));
         
+        var heatmaps = po.image();
+        map.add(heatmaps
+            .url(po.url("http://localhost:8080/crime-heatmap/{Z}/{X}/{Y}.png"))
+        );
+        heatmaps.container().style.opacity = 0.4;
+
         map.add(po.geoJson()
             .url("http://localhost:8000/crimes?bbox={B}")
             .on("load", load)
-            .zoom(14));
+            .zoom(15));
         
         map.container().setAttribute("class", "Blues");
 

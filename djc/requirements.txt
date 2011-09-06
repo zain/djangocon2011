@@ -1,2 +1,7 @@
 Django==1.3
 psycopg2==2.4.1
+TileStache==1.19.0
+PIL==1.1.7
+ModestMaps==1.2.0
+Werkzeug==0.7.1
+
